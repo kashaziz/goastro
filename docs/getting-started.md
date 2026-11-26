@@ -8,11 +8,19 @@
 
 ## Install
 
+To try goastro without installing it, run this in your Astro project:
+
 ```bash
-npm install --global goastro
+npx @goastro/goastro
 ```
 
-This installs the `goastro` command. If you use nvm, install it again after you switch to another Node version.
+For everyday use, install it once:
+
+```bash
+npm install --global @goastro/goastro
+```
+
+This installs the `goastro` command. The package is `@goastro/goastro`; the command you type is just `goastro`. If you use nvm, install it again after you switch to another Node version.
 
 ## Open your first project
 

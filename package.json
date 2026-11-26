@@ -1,5 +1,5 @@
 {
-  "name": "goastro",
+  "name": "@goastro/goastro",
   "version": "0.1.0",
   "description": "A visual editor for Astro content. Write posts without seeing Markdown; MDX components stay safe. Works with any Markdown or MDX folder.",
   "keywords": [
@@ -32,6 +32,9 @@
     "README.md",
     "LICENSE"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">=22.18"
   },

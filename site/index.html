@@ -14,7 +14,7 @@
     {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "goastro",
      "description": "A free, open-source local visual editor for the Markdown and MDX content of Astro sites.",
      "applicationCategory": "DeveloperApplication", "operatingSystem": "Linux, macOS, Windows (WSL)",
-     "url": "https://goastro.dev/", "downloadUrl": "https://www.npmjs.com/package/goastro",
+     "url": "https://goastro.dev/", "downloadUrl": "https://www.npmjs.com/package/@goastro/goastro",
      "license": "https://opensource.org/licenses/MIT",
      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
      "author": {"@type": "Person", "name": "Kashif Aziz", "url": "https://kashifaziz.me"}}
@@ -173,6 +173,7 @@
     .install { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: center; gap: 1.5rem 3rem; padding-block: 3rem; }
     .install-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: .9rem; }
     .install-box { padding: 1.3rem; border: 1px solid var(--band-line); border-radius: .9rem; background: var(--paper); box-shadow: var(--shadow); }
+    .try-npx { grid-column: 2; margin: -.4rem 0 0; color: var(--muted); font-size: .88rem; }
     .install-box .install-command { border-color: var(--line); background: var(--page); }
     .band.install { border-top: 0; }
     .install-steps li { display: grid; grid-template-columns: auto 1fr; gap: .4rem .7rem; align-items: center; }
@@ -308,6 +309,7 @@
       .audience { padding-block: 2.2rem; }
       .workflow, .install, .shots { padding-block: 2.2rem; }
       .install { grid-template-columns: minmax(0, 1fr); }
+      .try-npx { grid-column: 1; margin-top: 0; }
       .install-steps .install-command { flex-wrap: nowrap; }
       .install-steps .install-command code { font-size: .8rem; padding-inline: .3rem; white-space: nowrap; overflow-x: auto; }
       .install-box { padding: 1rem; }
@@ -450,10 +452,11 @@ We test a lot of flour. We bake with each new bag twice. Most of it is fine.
       </div>
       <ol class="install-steps install-box">
         <li><span class="step-no">1</span><span class="step-text">Install <span class="name">goastro</span> once</span>
-          <div class="install-command"><code id="cmd-install">npm install -g goastro</code><button class="button secondary copy" type="button" data-copy="cmd-install">Copy</button></div></li>
+          <div class="install-command"><code id="cmd-install">npm install -g @goastro/goastro</code><button class="button secondary copy" type="button" data-copy="cmd-install">Copy</button></div></li>
         <li><span class="step-no">2</span><span class="step-text">Run it in your Astro project</span>
           <div class="install-command"><code id="cmd-run">cd my-site &amp;&amp; goastro</code><button class="button secondary copy" type="button" data-copy="cmd-run">Copy</button></div></li>
       </ol>
+      <p class="try-npx">Just trying it? Run <code>npx @goastro/goastro</code> in your Astro project, with nothing to install.</p>
       <span class="visually-hidden" id="copy-status" role="status"></span>
     </section>
   </main>
@@ -466,7 +469,7 @@ We test a lot of flour. We bake with each new bag twice. Most of it is fine.
         <p class="fine">MIT license · Not affiliated with the Astro project.<br><a href="/privacy-disclaimer/">Privacy and disclaimer</a> · No telemetry</p>
       </div>
       <nav class="footer-cols" aria-label="Footer">
-        <div><h3>Product</h3><a href="https://github.com/kashaziz/goastro/blob/main/docs/getting-started.md">Getting started</a><a href="https://github.com/kashaziz/goastro/blob/main/docs/README.md">Docs</a><a href="https://www.npmjs.com/package/goastro">npm</a><a href="https://github.com/kashaziz/goastro">GitHub</a></div>
+        <div><h3>Product</h3><a href="https://github.com/kashaziz/goastro/blob/main/docs/getting-started.md">Getting started</a><a href="https://github.com/kashaziz/goastro/blob/main/docs/README.md">Docs</a><a href="https://www.npmjs.com/package/@goastro/goastro">npm</a><a href="https://github.com/kashaziz/goastro">GitHub</a></div>
         <div><h3>Get in touch</h3><a href="https://github.com/kashaziz/goastro/discussions">Questions and ideas</a><a href="https://github.com/kashaziz/goastro/issues">Report a bug</a><a href="https://github.com/kashaziz/goastro/security/policy">Security</a><a href="https://kashifaziz.me/contact/">Work with me</a></div>
       </nav>
     </div>

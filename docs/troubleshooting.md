@@ -33,7 +33,7 @@ Press Ctrl+C in its terminal, or run `goastro stop` in any terminal. For goastro
 ## The goastro command is not found
 
 - Check that Node.js 22.18 or later is installed: `node --version`.
-- With nvm, global packages belong to one Node version. Run `npm install --global goastro` again after you switch versions.
+- With nvm, global packages belong to one Node version. Run `npm install --global @goastro/goastro` again after you switch versions.
 
 ## Preview says "refused to connect" or stays empty
 

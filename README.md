@@ -5,10 +5,10 @@
   </picture>
 </h1>
 
-<p align="center"><strong>Write your Astro posts visually. Markdown and MDX stay safe.</strong></p>
+<p align="center"><strong>goastro: an open-source Markdown and MDX editor for Astro projects</strong></p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/goastro"><img src="https://img.shields.io/npm/v/goastro.svg" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@goastro/goastro"><img src="https://img.shields.io/npm/v/@goastro/goastro.svg" alt="npm version"></a>
   <a href="https://github.com/kashaziz/goastro/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-236247.svg" alt="MIT license"></a>
 </p>
 
@@ -26,18 +26,21 @@ It is built for Astro, and it works with any folder of Markdown or MDX files.
 
 goastro runs only on your computer. It does not publish, deploy or run Git commands.
 
-## Install
+## Quick start
 
 Node.js 22.18 or later is required.
 
-```bash
-npm install --global goastro
-```
-
-## Quick start
+Try it in your Astro project, with nothing to install:
 
 ```bash
 cd ~/work/my-astro-site
+npx @goastro/goastro
+```
+
+For everyday use, install it once. Then the `goastro` command works in any folder:
+
+```bash
+npm install --global @goastro/goastro
 goastro
 ```
 
