@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found · goastro</title>
+  <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+  <meta name="robots" content="noindex">
+  <style>
+    @font-face { font-family: 'Newsreader'; font-weight: 500; font-display: swap; src: url('/fonts/newsreader-latin-500-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'IBM Plex Mono'; font-weight: 600; font-display: swap; src: url('/fonts/ibm-plex-mono-latin-600-normal.woff2') format('woff2'); }
+    :root { color-scheme: light dark; --page: #f4f6eb; --ink: #18271e; --muted: #4b6155; --pine: #236247; --citron: #d8ed9b; }
+    @media (prefers-color-scheme: dark) { :root { --page: #101a13; --ink: #e7eee0; --muted: #acbead; --pine: #d8ed9b; } }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: var(--page); color: var(--ink); font-family: system-ui, sans-serif; text-align: center; padding: 1rem; }
+    .wordmark { font: 600 1.4rem/1 "IBM Plex Mono", monospace; letter-spacing: -.04em; text-decoration: none; color: var(--ink); }
+    .go { position: relative; isolation: isolate; color: #101a13; }
+    .go::before { content: ""; position: absolute; z-index: -1; inset: -.12em -.1em -.16em -.14em; background: var(--citron); border-radius: .14em .32em .18em .3em; transform: rotate(-3deg) skewX(-6deg); }
+    h1 { font: 500 2.4rem/1.1 "Newsreader", Georgia, serif; margin: 1.6rem 0 .6rem; }
+    p { color: var(--muted); } a { color: var(--pine); }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="wordmark" href="/"><span class="go">go</span>astro</a>
+    <h1>This page does not exist.</h1>
+    <p><a href="/">Go to the home page</a></p>
+  </main>
+</body>
+</html>

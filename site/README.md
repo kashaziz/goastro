@@ -1,6 +1,8 @@
 # goastro.dev
 
-The landing page for goastro: one static HTML page with images. No build step.
+The landing page for goastro: static HTML, fonts and images. No build step.
+It is served by Cloudflare Workers static assets, configured in `../wrangler.jsonc`
+(custom domain goastro.dev).
 
 Preview locally:
 
@@ -8,11 +10,15 @@ Preview locally:
 npx serve site
 ```
 
-Deploy to Cloudflare Pages (after the GitHub repository is public):
+Deploy (from the repository root):
 
 ```bash
-npx wrangler pages deploy site --project-name=goastro
+npx wrangler deploy
 ```
 
-Then attach the custom domain `goastro.dev` to the Pages project in the Cloudflare dashboard.
-If you change an inline <script> in index.html, update its sha256 hash in _headers (there are two scripts).
+Notes:
+
+- `_headers` sets the security headers. If you change an inline `<script>` in index.html
+  or privacy-disclaimer/index.html, update its sha256 hash in `_headers` (there are two scripts).
+- `.assetsignore` keeps this README from being published.
+- `404.html` is shown for unknown addresses.
