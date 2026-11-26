@@ -1,0 +1,63 @@
+---
+# A YAML comment that must survive
+title: 'Edge cases: everything at once'
+description: >
+  Folded description
+  over two lines.
+pubDate: 2026-01-15
+tags:
+  - alpha
+  - "beta"
+seo: { metaTitle: "Flow map" }
+draft: false
+---
+import Callout from '../../components/Callout.astro';
+export const year = 2026;
+
+{/* A flow-level MDX comment */}
+
+# Heading with `code` and *emphasis*
+
+A paragraph with **bold**, _underscore emphasis_, a [link](https://example.com "Title"), and {year} inline.
+It has a soft line break and an inline <Badge text="new" /> component.
+
+* Star bullet one
+* Star bullet two with **[bold link](/x)**
+
+1. First
+2. Second
+   - Nested bullet
+
+3. Loose item after a blank line
+
+- [ ] A task item
+- [x] Done task
+
+> A quote with *style*.
+
+[**Link around bold**](/y) stays protected.
+
+Text with a footnote.[^1]
+
+[^1]: The footnote.
+
+<Callout type="warning">
+  Content **inside** a component.
+</Callout>
+
+| A | B |
+|---|---|
+| 1 | 2 |
+
+```js
+const x = { a: 1 };
+```
+
+![Alt text](/images/photo.webp "Photo title")
+
+Line with a hard break\
+next line.
+
+***
+
+Last paragraph without trailing newline.

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy and disclaimer: no telemetry · goastro</title>
+  <meta name="description" content="No telemetry. No data sent to any server. goastro runs on your computer and collects nothing, and goastro.dev does not track you. Provided as is under the MIT license.">
+  <link rel="canonical" href="https://goastro.dev/privacy-disclaimer/">
+  <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    // Theme before first paint: a saved choice, else the system setting.
+    try { const t = localStorage.getItem('goastro-site-theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch {}
+  </script>
+  <style>
+    @font-face { font-family: 'Newsreader'; font-weight: 500; font-display: swap; src: url('/fonts/newsreader-latin-500-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'IBM Plex Mono'; font-weight: 600; font-display: swap; src: url('/fonts/ibm-plex-mono-latin-600-normal.woff2') format('woff2'); }
+    :root { color-scheme: light; --page: #f4f6eb; --ink: #18271e; --muted: #4b6155; --line: #d7e0d0; --pine: #236247; --citron: #d8ed9b; --on-citron: #101a13; --glow: none; }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { color-scheme: dark; --page: #101a13; --ink: #e7eee0; --muted: #acbead; --line: #2b3d30; --pine: #d8ed9b; --glow: 0 0 20px #d8ed9b55; } }
+    :root[data-theme="dark"] { color-scheme: dark; --page: #101a13; --ink: #e7eee0; --muted: #acbead; --line: #2b3d30; --pine: #d8ed9b; --glow: 0 0 20px #d8ed9b55; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--page); color: var(--ink); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.65; }
+    .wrap { width: min(46rem, calc(100% - 2rem)); margin-inline: auto; }
+    header { display: flex; align-items: center; justify-content: space-between; min-height: 4.5rem; border-bottom: 1px solid var(--line); }
+    a { color: var(--pine); }
+    .brand { text-decoration: none; color: var(--ink); }
+    .wordmark { font: 600 1.3rem/1 "IBM Plex Mono", ui-monospace, monospace; letter-spacing: -.04em; }
+    .wordmark .go { position: relative; isolation: isolate; color: var(--on-citron); }
+    .wordmark .go::before { content: ""; position: absolute; z-index: -1; inset: -.12em -.1em -.16em -.14em; background: var(--citron); border-radius: .14em .32em .18em .3em; transform: rotate(-3deg) skewX(-6deg); box-shadow: var(--glow); }
+    main { padding-block: 2.5rem 1rem; }
+    h1 { font: 500 clamp(2.2rem, 6vw, 3rem)/1.1 "Newsreader", Georgia, serif; letter-spacing: -.03em; margin: 0 0 .4rem; }
+    h3 { font: 600 1.05rem/1.4 system-ui, sans-serif; margin: 1.6rem 0 .3rem; color: var(--ink); }
+    .promise { margin: 1.8rem 0 0; padding: 1.4rem 1.5rem; border: 1px solid var(--line); border-left: 4px solid var(--citron); border-radius: 0 .9rem .9rem 0; background: #eaf4c8; border-color: #cfe39a; }
+    :root[data-theme="dark"] .promise { background: #1f3420; border-color: #3a5a2c; }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .promise { background: #1f3420; border-color: #3a5a2c; } }
+    .promise p, .promise li { color: var(--ink); }
+    .promise .promise-head .hl::before { background: #bfdc5e; }
+    :root[data-theme="dark"] .promise .promise-head .hl::before { background: var(--citron); }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .promise .promise-head .hl::before { background: var(--citron); } }
+    .promise-head { margin: 0 0 .6rem; font: 500 clamp(1.5rem, 4.5vw, 2rem)/1.2 "Newsreader", Georgia, serif; color: var(--ink); letter-spacing: -.02em; }
+    .promise .hl { position: relative; isolation: isolate; color: var(--on-citron); white-space: nowrap; }
+    .promise .hl::before { content: ""; position: absolute; z-index: -1; inset: 8% -.08em .02em -.06em; background: var(--citron); border-radius: .1em .22em .13em .18em; transform: rotate(-1.2deg) skewX(-8deg); box-shadow: var(--glow); }
+    .facts { margin: .9rem 0 0; padding-left: 1.1rem; }
+    .facts li { margin: .35rem 0; }
+    .facts b { color: var(--ink); }
+    .toc { margin: .4rem 0 0; font-size: .95rem; }
+    h2 { font: 500 1.9rem/1.2 "Newsreader", Georgia, serif; margin: 2.6rem 0 .4rem; padding-top: 1.4rem; border-top: 1px solid var(--line); }
+    p, li { color: var(--muted); }
+    strong { color: var(--ink); }
+    .updated { font-size: .88rem; }
+    /* footer: the same dark footer as the home page */
+    .site-footer { background: #18271e; color: #e7eee0; margin-top: 3rem; }
+    :root[data-theme="dark"] .site-footer { background: #0a110c; }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .site-footer { background: #0a110c; } }
+    .footer { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem 3rem; width: min(74rem, calc(100% - 3rem)); margin-inline: auto; padding-block: 2.6rem 2.4rem; }
+    .footer-brand { max-width: 22rem; }
+    .footer-brand p { margin: .9rem 0 0; color: #b5c4b4; font-size: .92rem; line-height: 1.6; }
+    .footer-brand a:not(.brand) { color: #e7eee0; }
+    .footer-brand .fine { margin-top: .7rem; font-size: .8rem; color: #93a593; }
+    .footer-brand .fine a { color: #b5c4b4; }
+    .site-footer .wordmark { color: #f4f6eb; }
+    .site-footer .brand { text-decoration: none; }
+    .footer-cols { display: flex; flex-wrap: wrap; gap: 2rem 3.5rem; }
+    .footer-cols div { display: flex; flex-direction: column; gap: .55rem; }
+    .footer-cols h3 { margin: 0 0 .2rem; font: 600 .78rem/1.4 "IBM Plex Mono", ui-monospace, monospace; text-transform: uppercase; letter-spacing: .08em; color: #d8ed9b; }
+    .footer-cols a { color: #dfe7d8; text-decoration: none; font-size: .93rem; }
+    .footer-cols a:hover, .footer-brand a:hover { text-decoration: underline; }
+    .nowrap { white-space: nowrap; }
+
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <a class="brand" href="/" aria-label="goastro home"><span class="wordmark"><span class="go">go</span>astro</span></a>
+    <a href="/">Home</a>
+  </header>
+  <main class="wrap">
+    <h1>Privacy and disclaimer</h1>
+    <p class="updated">Last updated: 25 November 2026</p>
+    <nav class="toc"><a href="#privacy">Privacy</a> · <a href="#disclaimer">Disclaimer</a></nav>
+
+    <section class="promise" aria-label="Our promise">
+      <p class="promise-head"><span class="hl">No telemetry.</span> No data sent to any server.</p>
+      <p>goastro has no telemetry, analytics or crash reporting. It runs on your computer and works with your files there. Your content and how you use goastro stay on your machine. It is <a href="https://github.com/kashaziz/goastro">open source</a>, so anyone can check.</p>
+    </section>
+
+    <h2 id="privacy">Privacy</h2>
+    <p>In short: the goastro app collects nothing, and this website does not track you.</p>
+
+    <h3>The goastro app</h3>
+    <p>goastro runs on your own computer. It reads and writes the files in the project folders you open, and it stores its settings and backups in your user folder. <strong>It sends no data anywhere:</strong> no telemetry, no analytics, no crash reports, no accounts and no sign-in. It works fully offline.</p>
+    <p>If a post you open shows an image from another website, your browser loads that image from there, as any Markdown editor does.</p>
+
+    <h3>This website (goastro.dev)</h3>
+    <ul>
+      <li><strong>No cookies, no analytics, no trackers.</strong> The site loads nothing from other services. Fonts and images are served from goastro.dev itself.</li>
+      <li><strong>Theme choice.</strong> If you switch between light and dark mode, the choice is saved in your own browser (local storage). It never leaves your device. Clear your browser data to remove it.</li>
+      <li><strong>The live demo</strong> runs only in your browser. What you type is not stored or sent anywhere, and a reload resets it.</li>
+      <li><strong>Hosting.</strong> The site is hosted on Cloudflare Pages. Like any web host, Cloudflare processes technical data such as IP addresses to deliver and protect the site. See the <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare privacy policy</a>.</li>
+    </ul>
+
+    <h3>Links to other sites</h3>
+    <p>This site links to GitHub, npm and kashifaziz.me. Their own privacy policies apply when you visit them.</p>
+
+    <h3>Contact</h3>
+    <p>Questions about privacy? Use the <a href="https://kashifaziz.me/contact/">contact form</a>, or ask in <a href="https://github.com/kashaziz/goastro/discussions">GitHub Discussions</a>.</p>
+
+    <h2 id="disclaimer">Disclaimer</h2>
+
+    <h3>Provided as is</h3>
+    <p>goastro is free, open-source software under the <a href="https://github.com/kashaziz/goastro/blob/main/LICENSE">MIT license</a>. It is provided <strong>as is, without warranty of any kind</strong>, as the license states. You use it at your own risk.</p>
+
+    <h3>Keep backups</h3>
+    <p>goastro is built to protect your content: it reviews every change before saving, keeps components intact, and backs up each file before it writes it. Still, no software is perfect. <strong>Keep your content in version control (such as Git) or another backup</strong>, and review changes before you publish your site.</p>
+
+    <h3>Preview runs your project's code</h3>
+    <p>Starting a dev server for Preview runs your project's own <code>dev</code> script, just like <code>npm run dev</code> in a terminal. Only do this for projects you trust.</p>
+
+    <h3>Not affiliated with Astro</h3>
+    <p>goastro is an independent project. It is not affiliated with, endorsed by or sponsored by the Astro project or The Astro Technology Company. "Astro" is used only to describe the sites that goastro works with.</p>
+
+    <h3>No liability</h3>
+    <p>To the extent the law allows, the authors are not liable for any loss of data, lost content, downtime or other damage that results from using goastro or this website.</p>
+  </main>
+  <footer class="site-footer">
+    <div class="footer wrap">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="goastro home"><span class="wordmark"><span class="go">go</span>astro</span></a>
+        <p>A visual editor for your Astro content.<br><span class="nowrap">Free and open source,</span> made by <a href="https://kashifaziz.me">Kashif Aziz</a>.</p>
+        <p class="fine">MIT license · Not affiliated with the Astro project.<br><a href="/privacy-disclaimer/">Privacy and disclaimer</a> · No telemetry</p>
+      </div>
+      <nav class="footer-cols" aria-label="Footer">
+        <div><h3>Product</h3><a href="https://github.com/kashaziz/goastro/blob/main/docs/getting-started.md">Getting started</a><a href="https://github.com/kashaziz/goastro/blob/main/docs/README.md">Docs</a><a href="https://www.npmjs.com/package/goastro">npm</a><a href="https://github.com/kashaziz/goastro">GitHub</a></div>
+        <div><h3>Get in touch</h3><a href="https://github.com/kashaziz/goastro/discussions">Questions and ideas</a><a href="https://github.com/kashaziz/goastro/issues">Report a bug</a><a href="https://github.com/kashaziz/goastro/security/policy">Security</a><a href="https://kashifaziz.me/contact/">Work with me</a></div>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
